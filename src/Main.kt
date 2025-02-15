@@ -4,8 +4,8 @@ fun main() {
         fun comprobarPrestamo(usuario: Usuario, libro: Libro){
             when(usuario){
                 is Usuario.Estudiante -> println("Prestamo de libro ${libro.titulo} a ${usuario.nombre} aceptado")
-                is Usuario.Profesor -> println("Prestamo ${libro.titulo} a ${usuario.nombre} aceptado")
-                is Usuario.Visitante -> println("Prestamo ${libro.titulo} a ${usuario.nombre} denegado")
+                is Usuario.Profesor -> println("Prestamo de libro ${libro.titulo} a ${usuario.nombre} aceptado")
+                is Usuario.Visitante -> println("Prestamo de libro ${libro.titulo} a ${usuario.nombre} denegado")
             }
         }
 
@@ -15,6 +15,8 @@ fun main() {
 
     val libro1 = Libro("Noseque", "Nosecuanto")
 
-    
+    comprobarPrestamo(usuario1, libro1)
+    comprobarPrestamo(usuario2, libro1)
+    comprobarPrestamo(usuario3, libro1)
 
 }
